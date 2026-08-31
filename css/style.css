@@ -1,0 +1,3412 @@
+/* =========================================
+DOCES DA ILHA
+STYLE.CSS
+========================================= */
+
+/* =========================================
+1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFF9F4;
+    color: #4A3530;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================================
+2. CABEÇALHO
+========================================= */
+
+header {
+    background-color: #FFF9F4;
+    border-bottom: 1px solid #E8D5B5;
+    padding: 20px 5%;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.logo {
+    color: #C97F8C;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul a {
+    color: #4A3530;
+    font-size: 0.95rem;
+
+    transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+    color: #C97F8C;
+}
+
+/* =========================================
+3. BANNER PRINCIPAL
+========================================= */
+
+.hero {
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 5%;
+
+    background-color: #F3D6DA;
+}
+
+.hero-conteudo {
+    max-width: 600px;
+}
+
+.destaque,
+.subtitulo {
+    color: #B28A45;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: #4A3530;
+    font-size: 3.5rem;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-conteudo > p:not(.destaque) {
+    max-width: 500px;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+4. BOTÕES
+========================================= */
+
+.botao {
+    display: inline-block;
+
+    background-color: #B96D7A;
+    color: #FFFFFF;
+
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 25px;
+
+    font-weight: bold;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #B96D7A;
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    background: transparent;
+    color: #4A3530;
+    border: 1px solid currentColor;
+}
+
+.botao-secundario:hover {
+    background-color: #C97F8C;
+    color: #FFFFFF;
+}
+
+/* =========================================
+5. APRESENTAÇÃO
+========================================= */
+
+.apresentacao {
+    padding: 90px 5%;
+}
+
+.apresentacao-conteudo {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.apresentacao-texto h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.apresentacao-texto > p:not(.subtitulo) {
+    margin-bottom: 25px;
+}
+
+.apresentacao-imagem img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+.link-destaque {
+    color: #B28A45;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.link-destaque:hover {
+    color: #C97F8C;
+}
+
+/* =========================================
+6. PRODUTOS EM DESTAQUE
+========================================= */
+
+.destaques {
+    background-color: #FFFFFF;
+    padding: 90px 5%;
+}
+
+.titulo-secao {
+    max-width: 700px;
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.produtos {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.produto-card {
+    background-color: #FFF9F4;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(74, 53, 48, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 20px;
+}
+
+.produto-info h3 {
+    margin-bottom: 10px;
+}
+
+.produto-info p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.preco {
+    display: block;
+
+    color: #B28A45;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+/* =========================================
+7. FIDELIDADE
+========================================= */
+
+.fidelidade {
+    padding: 90px 5%;
+    background-color: #F3D6DA;
+}
+
+.fidelidade-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.fidelidade-texto h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.fidelidade-texto p {
+    margin-bottom: 15px;
+}
+
+.fidelidade-etapas {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.etapa {
+    text-align: center;
+}
+
+.etapa span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 8px;
+
+    border-radius: 50%;
+
+    background-color: #FFFFFF;
+    color: #B28A45;
+
+    font-weight: bold;
+}
+
+.destaque-etapa span,
+.desconto span {
+    background-color: #C97F8C;
+    color: #FFFFFF;
+}
+
+.separador {
+    color: #B28A45;
+    font-size: 1.5rem;
+}
+
+/* =========================================
+8. ENCOMENDAS
+========================================= */
+
+.encomendas {
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.encomendas-conteudo {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.encomendas-conteudo h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.encomendas-conteudo > p:not(.subtitulo) {
+    margin-bottom: 30px;
+}
+
+/* =========================================
+9. CHAMADA PARA O CARDÁPIO
+========================================= */
+
+.chamada-cardapio {
+    padding: 80px 5%;
+
+    text-align: center;
+
+    background-color: #EAD7B5;
+}
+
+.chamada-cardapio h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.chamada-cardapio p {
+    margin-bottom: 25px;
+}
+
+/* =========================================
+10. RODAPÉ
+========================================= */
+
+footer {
+    background-color: #4A3530;
+    color: #FFFFFF;
+}
+
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 60px 5%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+}
+
+.rodape-conteudo h3 {
+    color: #E8D5B5;
+    margin-bottom: 15px;
+}
+
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rodape-links a:hover {
+    color: #E8D5B5;
+}
+
+.rodape-contato p {
+    margin-bottom: 8px;
+}
+
+.rodape-final {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    text-align: center;
+
+    padding: 20px 5%;
+
+    font-size: 0.85rem;
+}
+
+/* =========================================
+11. PÁGINA CARDÁPIO
+========================================= */
+
+.cabecalho-cardapio {
+    background-color: #F3D6DA;
+
+    padding: 80px 5%;
+
+    text-align: center;
+}
+
+.cabecalho-cardapio-conteudo {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cabecalho-cardapio h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.cabecalho-cardapio-conteudo > p:not(.subtitulo) {
+    font-size: 1.1rem;
+}
+
+.categoria-cardapio {
+    padding: 80px 5%;
+    background-color: #FFF9F4;
+}
+
+.categoria-rosa {
+    background-color: #FFFFFF;
+}
+
+.categoria-cardapio + .categoria-cardapio {
+    border-top: 1px solid #E8D5B5;
+}
+/* =========================================
+12. PÁGINA PEDIDOS
+========================================= */
+
+.cabecalho-pedidos {
+    background-color: #F3D6DA;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.cabecalho-pedidos-conteudo {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Área principal dos pedidos */
+
+.area-pedido {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 80px 5%;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.lista-pedidos {
+    min-width: 0;
+}
+
+/* Categorias */
+
+.categoria-pedido {
+    margin-bottom: 50px;
+}
+
+.categoria-pedido > h2 {
+    color: #4A3530;
+    font-size: 1.8rem;
+
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #E8D5B5;
+}
+
+.produtos-pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Produtos */
+
+.produto-pedido {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+    gap: 30px;
+    padding: 20px 25px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(74, 53, 48, 0.06);
+}
+
+/* Quantidade */
+
+.quantidade-pedido {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    align-items: center;
+}
+
+.quantidade-pedido input {
+    width: 75px;
+
+    padding: 10px;
+
+    border: 1px solid #E8D5B5;
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-size: 1rem;
+
+    background-color: #FFF9F4;
+}
+
+.quantidade-pedido input:focus {
+    outline: none;
+    border-color: #C97F8C;
+}
+
+/* =========================================
+RESUMO DO PEDIDO
+========================================= */
+
+/* Fidelidade dentro do resumo */
+
+.texto-fidelidade {
+    background-color: #FFF9F4;
+
+    padding: 15px;
+    margin: 20px 0;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.texto-fidelidade strong {
+    color: #B28A45;
+}
+
+.botao-finalizar {
+    width: 100%;
+    text-align: center;
+}
+
+/* =========================================
+14. DADOS DO CLIENTE
+========================================= */
+
+.dados-cliente {
+    padding: 90px 5%;
+    background-color: #FFFFFF;
+}
+
+.dados-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dados-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.titulo-pedido {
+    margin-bottom: 35px;
+}
+
+/* Campos do formulário */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+.campo label {
+    font-weight: bold;
+    color: #4A3530;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #C97F8C;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    background-color: #FFF9F4;
+    color: #4A3530;
+
+    outline: none;
+
+    box-shadow: 0 0 0 2px rgba(201, 127, 140, 0.12);
+}
+
+.campo input {
+    min-height: 48px;
+}
+
+.campo textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #9B8882;
+}
+
+/* Telefone e e-mail */
+
+.campos-duplos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    width: 100%;
+}
+
+/* =========================================
+15. FORMA DE PAGAMENTO
+========================================= */
+
+.forma-pagamento {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 25px;
+
+    background-color: #FFF9F4;
+
+    border-radius: 12px;
+    border: 1px solid #F0E5D8;
+}
+
+.forma-pagamento h3 {
+    margin-bottom: 5px;
+}
+
+.forma-pagamento label {
+    cursor: pointer;
+}
+
+/* =========================================
+16. AVISO DE FIDELIDADE
+========================================= */
+
+.aviso-fidelidade {
+    padding: 70px 5%;
+
+    background-color: #F3D6DA;
+
+    text-align: center;
+}
+
+.aviso-fidelidade > div {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.aviso-fidelidade h2 {
+    margin-bottom: 15px;
+}
+
+.aviso-fidelidade p:not(.subtitulo) {
+    margin-bottom: 20px;
+}
+
+/* =========================================
+17. RESPONSIVIDADE — TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+
+    /* Cabeçalho */
+
+    nav {
+        flex-direction: column;
+    }
+
+    /* Apresentação */
+
+    .apresentacao-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    /* Produtos da página inicial */
+
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Fidelidade */
+
+    .fidelidade-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    /* Rodapé */
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Banner */
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Página pedidos */
+
+    .area-pedido {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+18. RESPONSIVIDADE — CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Cabeçalho */
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Banner */
+
+    .hero {
+        min-height: auto;
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-conteudo > p:not(.destaque) {
+        font-size: 1rem;
+    }
+
+    /* Botões */
+
+    .hero-botoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-botoes .botao {
+        text-align: center;
+    }
+
+    /* Seções */
+
+    .apresentacao,
+    .destaques,
+    .fidelidade,
+    .encomendas {
+        padding: 70px 5%;
+    }
+
+    /* Apresentação */
+
+    .apresentacao-imagem img {
+        height: 300px;
+    }
+
+    /* Produtos */
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .produto-card img {
+        height: 280px;
+    }
+
+    /* Fidelidade */
+
+    .fidelidade-etapas {
+        flex-direction: column;
+    }
+
+    .separador {
+        transform: rotate(90deg);
+    }
+
+    /* Rodapé */
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .rodape-links {
+        align-items: center;
+    }
+        /* Página Cardápio */
+
+    .cabecalho-cardapio {
+        padding: 70px 5%;
+    }
+
+    .cabecalho-cardapio h1 {
+        font-size: 2.3rem;
+    }
+
+    /* Página Pedidos */
+
+    .cabecalho-pedidos {
+        padding: 70px 5%;
+    }
+
+    .cabecalho-pedidos h1 {
+        font-size: 2.3rem;
+    }
+
+    .area-pedido {
+        padding: 60px 5%;
+    }
+
+    .categoria-pedido > h2 {
+        font-size: 1.5rem;
+    }
+
+    .produto-pedido {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    .quantidade-pedido {
+        align-items: flex-start;
+    }
+
+    /* Formulário */
+
+    .campos-duplos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+AJUSTES — PÁGINA DE ENCOMENDAS
+========================================= */
+
+/* Cabeçalho da página */
+
+.hero-encomendas {
+    min-height: 480px;
+    padding: 80px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-encomendas-conteudo {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.hero-encomendas .destaque {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero-encomendas h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-encomendas p:not(.destaque) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* =========================================
+INTRODUÇÃO
+========================================= */
+
+.introducao-encomendas {
+    padding: 80px 5%;
+}
+
+.introducao-encomendas-conteudo {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.introducao-encomendas .subtitulo {
+    font-size: 0.8rem;
+    letter-spacing: 1.8px;
+    margin-bottom: 15px;
+}
+
+.introducao-encomendas h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 22px;
+}
+
+.introducao-encomendas p:not(.subtitulo) {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+TÍTULOS DAS SEÇÕES
+========================================= */
+
+.eventos-encomendas .titulo-secao,
+.opcoes-encomendas .titulo-secao,
+.como-funciona-encomendas .titulo-secao,
+.solicitar-encomenda .titulo-secao {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.titulo-secao .subtitulo {
+    font-size: 0.8rem;
+    letter-spacing: 1.8px;
+    margin-bottom: 12px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.titulo-secao > p:not(.subtitulo) {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* =========================================
+TIPOS DE EVENTOS
+========================================= */
+
+.eventos-encomendas {
+    padding: 80px 5%;
+}
+
+.eventos-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+.evento-card {
+    padding: 30px 22px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #EADBD2;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.evento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(80, 50, 45, 0.08);
+}
+
+.evento-icone {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+}
+
+.evento-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.evento-card p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+/* =========================================
+OPÇÕES DE ENCOMENDA
+========================================= */
+
+.opcoes-encomendas {
+    padding: 80px 5%;
+}
+
+.opcoes-grid {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.opcao-card {
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #EADBD2;
+}
+
+.opcao-icone {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.opcao-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.opcao-card p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* =========================================
+COMO FUNCIONA
+========================================= */
+
+.como-funciona-encomendas {
+    padding: 80px 5%;
+}
+
+.etapas-encomenda {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.etapa-encomenda {
+    text-align: center;
+    padding: 20px;
+}
+
+.etapa-encomenda > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+
+    background-color: #F3D6DA;
+}
+
+.etapa-encomenda h3 {
+    font-size: 1.05rem;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.etapa-encomenda p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* =========================================
+FORMULÁRIO DE ENCOMENDA
+========================================= */
+
+.solicitar-encomenda {
+    padding: 90px 5%;
+    background-color: #FFFAF7;
+}
+
+.formulario-encomenda-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.formulario-encomenda {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+
+    padding: 40px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #EADBD2;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 30px rgba(80, 50, 45, 0.06);
+}
+
+.formulario-encomenda .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario-encomenda label {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.formulario-encomenda input,
+.formulario-encomenda select,
+.formulario-encomenda textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #DFCEC4;
+    border-radius: 7px;
+
+    background-color: #FFFFFF;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #4A3530;
+
+    box-sizing: border-box;
+}
+
+.formulario-encomenda input,
+.formulario-encomenda select {
+    min-height: 46px;
+}
+
+.formulario-encomenda textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.formulario-encomenda input:focus,
+.formulario-encomenda select:focus,
+.formulario-encomenda textarea:focus {
+    outline: none;
+
+    border-color: #C97F8C;
+
+    box-shadow: 0 0 0 2px rgba(201, 127, 140, 0.12);
+}
+
+/* =========================================
+CHAMADA FINAL
+========================================= */
+
+.chamada-encomenda {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.chamada-encomenda > div {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.chamada-encomenda .subtitulo {
+    font-size: 0.8rem;
+    letter-spacing: 1.8px;
+    margin-bottom: 14px;
+}
+
+.chamada-encomenda h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.chamada-encomenda p:not(.subtitulo) {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+RESPONSIVIDADE — ENCOMENDAS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .eventos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .opcoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .etapas-encomenda {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero-encomendas {
+        min-height: 420px;
+        padding: 60px 6%;
+    }
+
+    .hero-encomendas h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-encomendas p:not(.destaque) {
+        font-size: 0.95rem;
+    }
+
+    .introducao-encomendas,
+    .eventos-encomendas,
+    .opcoes-encomendas,
+    .como-funciona-encomendas {
+        padding: 60px 6%;
+    }
+
+    .eventos-grid,
+    .opcoes-grid,
+    .etapas-encomenda {
+        grid-template-columns: 1fr;
+    }
+
+    .evento-card,
+    .opcao-card {
+        padding: 25px 20px;
+    }
+
+    .formulario-encomenda {
+        padding: 25px 20px;
+    }
+
+    .solicitar-encomenda {
+        padding: 60px 6%;
+    }
+
+    .chamada-encomenda {
+        padding: 60px 6%;
+    }
+}
+/* =========================================
+AJUSTES — PÁGINA DE FIDELIDADE
+========================================= */
+
+/* =========================================
+HERO
+========================================= */
+
+.hero-fidelidade {
+    min-height: 450px;
+
+    padding: 75px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-fidelidade-conteudo {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.hero-fidelidade .destaque {
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero-fidelidade h1 {
+    max-width: 720px;
+
+    margin: 0 auto 22px;
+
+    font-size: clamp(2.2rem, 5vw, 3.3rem);
+    line-height: 1.17;
+}
+
+.hero-fidelidade p:not(.destaque) {
+    max-width: 620px;
+
+    margin: 0 auto 28px;
+
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+/* =========================================
+DESTAQUE DOS 5%
+========================================= */
+
+.destaque-desconto {
+    padding: 75px 5%;
+    background-color: #FFFAF7;
+}
+
+.destaque-desconto-conteudo {
+    max-width: 950px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 260px 1fr;
+
+    align-items: center;
+
+    gap: 55px;
+}
+
+/* Número do desconto */
+
+.desconto-numero {
+    width: 220px;
+    height: 220px;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F3D6DA;
+
+    border: 2px solid #C9A45C;
+
+    text-align: center;
+}
+
+.desconto-numero span {
+    font-size: 4.5rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.desconto-numero small {
+    margin-top: 8px;
+
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+/* Texto do desconto */
+
+.desconto-texto .subtitulo {
+    font-size: 0.8rem;
+    letter-spacing: 1.8px;
+    margin-bottom: 13px;
+}
+
+.desconto-texto h2 {
+    max-width: 600px;
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+
+    margin-bottom: 18px;
+}
+
+.desconto-texto p:not(.subtitulo) {
+    max-width: 620px;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+}
+
+/* =========================================
+COMO FUNCIONA
+========================================= */
+
+.como-funciona-fidelidade {
+    padding: 80px 5%;
+}
+
+.como-funciona-fidelidade .titulo-secao {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.como-funciona-fidelidade .titulo-secao h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.como-funciona-fidelidade .titulo-secao p:not(.subtitulo) {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Etapas */
+
+.etapas-fidelidade {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.etapa-fidelidade {
+    padding: 28px 22px;
+
+    text-align: center;
+
+    border: 1px solid #EADBD2;
+    border-radius: 12px;
+
+    background-color: #FFFFFF;
+}
+
+.numero-etapa {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 17px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F3D6DA;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.etapa-fidelidade h3 {
+    font-size: 1.05rem;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.etapa-fidelidade p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Destaque da terceira compra */
+
+.destaque-etapa-fidelidade {
+    border-color: #C9A45C;
+    box-shadow: 0 6px 20px rgba(80, 50, 45, 0.06);
+}
+
+.destaque-etapa-fidelidade .numero-etapa {
+    background-color: #E8D3A3;
+}
+
+/* Etapa do desconto */
+
+.etapa-desconto {
+    border-color: #C9A45C;
+    background-color: #FFFAF2;
+}
+
+.etapa-desconto .numero-etapa {
+    background-color: #C9A45C;
+    color: #FFFFFF;
+}
+
+/* =========================================
+BENEFÍCIOS
+========================================= */
+
+.beneficios-fidelidade {
+    padding: 80px 5%;
+    background-color: #FFFAF7;
+}
+
+.beneficios-fidelidade .titulo-secao {
+    max-width: 720px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.beneficios-grid {
+    max-width: 950px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.beneficio-card {
+    padding: 32px 25px;
+
+    text-align: center;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #EADBD2;
+    border-radius: 12px;
+}
+
+.beneficio-icone {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.beneficio-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.beneficio-card p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* =========================================
+REGRAS DO PROGRAMA
+========================================= */
+
+.regras-fidelidade {
+    padding: 80px 5%;
+}
+
+.regras-fidelidade-conteudo {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.regras-fidelidade .titulo-secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.regras-fidelidade .titulo-secao h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.regras-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.regra {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 20px;
+
+    border: 1px solid #EADBD2;
+    border-radius: 9px;
+
+    background-color: #FFFFFF;
+}
+
+.regra span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #F3D6DA;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.regra p {
+    margin: 0;
+
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+/* =========================================
+CHAMADA FINAL
+========================================= */
+
+.chamada-fidelidade {
+    padding: 80px 5%;
+
+    text-align: center;
+
+    background-color: #FFFAF7;
+}
+
+.chamada-fidelidade > div {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.chamada-fidelidade .subtitulo {
+    font-size: 0.8rem;
+    letter-spacing: 1.8px;
+    margin-bottom: 14px;
+}
+
+.chamada-fidelidade h2 {
+    max-width: 650px;
+
+    margin: 0 auto 15px;
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+}
+
+.chamada-fidelidade p:not(.subtitulo) {
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+/* =========================================
+RESPONSIVIDADE — FIDELIDADE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .destaque-desconto-conteudo {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .desconto-numero {
+        width: 190px;
+        height: 190px;
+    }
+
+    .desconto-numero span {
+        font-size: 3.8rem;
+    }
+
+    .desconto-texto h2,
+    .desconto-texto p:not(.subtitulo) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .etapas-fidelidade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero-fidelidade {
+        min-height: 400px;
+        padding: 60px 6%;
+    }
+
+    .hero-fidelidade h1 {
+        font-size: 2.15rem;
+    }
+
+    .hero-fidelidade p:not(.destaque) {
+        font-size: 0.95rem;
+    }
+
+    .destaque-desconto {
+        padding: 60px 6%;
+    }
+
+    .desconto-numero {
+        width: 165px;
+        height: 165px;
+    }
+
+    .desconto-numero span {
+        font-size: 3.2rem;
+    }
+
+    .desconto-numero small {
+        font-size: 0.65rem;
+    }
+
+    .como-funciona-fidelidade,
+    .beneficios-fidelidade,
+    .regras-fidelidade {
+        padding: 60px 6%;
+    }
+
+    .etapas-fidelidade,
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .etapa-fidelidade {
+        padding: 25px 20px;
+    }
+
+    .regra {
+        grid-template-columns: 40px 1fr;
+        gap: 14px;
+        padding: 16px;
+    }
+
+    .regra span {
+        width: 35px;
+        height: 35px;
+    }
+
+    .regra p {
+        font-size: 0.88rem;
+    }
+
+    .chamada-fidelidade {
+        padding: 60px 6%;
+    }
+}
+/* =========================================
+AJUSTES — PÁGINA SOBRE
+========================================= */
+
+/* =========================================
+HERO
+========================================= */
+
+.hero-sobre {
+    min-height: 430px;
+    padding: 75px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-sobre-conteudo {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.hero-sobre .destaque {
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero-sobre h1 {
+    max-width: 720px;
+    margin: 0 auto 22px;
+
+    font-size: clamp(2.2rem, 5vw, 3.3rem);
+    line-height: 1.17;
+}
+
+.hero-sobre p:not(.destaque) {
+    max-width: 630px;
+    margin: 0 auto;
+
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+/* =========================================
+HISTÓRIA
+========================================= */
+
+.historia-sobre {
+    padding: 85px 5%;
+    background-color: #FFFAF7;
+}
+
+.historia-sobre-conteudo {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    align-items: center;
+
+    gap: 70px;
+}
+
+/* Texto */
+
+.historia-texto .subtitulo {
+    font-size: 0.8rem;
+    letter-spacing: 1.8px;
+    margin-bottom: 14px;
+}
+
+.historia-texto h2 {
+    max-width: 650px;
+    margin-bottom: 24px;
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+}
+
+.historia-texto p {
+    max-width: 680px;
+    margin-bottom: 16px;
+
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+/* Destaque */
+
+.historia-destaque {
+    min-height: 330px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px solid #C9A45C;
+    border-radius: 14px;
+
+    background-color: #FFFFFF;
+
+    box-shadow: 0 8px 25px rgba(80, 50, 45, 0.05);
+}
+
+.historia-destaque span {
+    margin-bottom: 20px;
+
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.historia-destaque strong {
+    max-width: 300px;
+
+    font-size: 1.7rem;
+    line-height: 1.35;
+    font-weight: 600;
+}
+
+/* =========================================
+ESSÊNCIA
+========================================= */
+
+.essencia-sobre {
+    padding: 85px 5%;
+}
+
+.essencia-sobre .titulo-secao {
+    max-width: 720px;
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.essencia-sobre .titulo-secao h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.essencia-sobre .titulo-secao p:not(.subtitulo) {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.essencia-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.essencia-card {
+    padding: 32px 25px;
+
+    text-align: center;
+
+    border: 1px solid #EADBD2;
+    border-radius: 12px;
+
+    background-color: #FFFFFF;
+}
+
+.essencia-icone {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.essencia-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.essencia-card p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+/* =========================================
+DIFERENCIAL
+========================================= */
+
+.diferencial-sobre {
+    padding: 85px 5%;
+    background-color: #FFFAF7;
+}
+
+.diferencial-conteudo {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 70px;
+}
+
+.diferencial-texto .subtitulo {
+    font-size: 0.8rem;
+    letter-spacing: 1.8px;
+    margin-bottom: 14px;
+}
+
+.diferencial-texto h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.diferencial-texto p {
+    max-width: 600px;
+
+    font-size: 0.98rem;
+    line-height: 1.75;
+
+    margin-bottom: 15px;
+}
+
+/* Lista de diferenciais */
+
+.diferencial-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.diferencial-item {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    align-items: center;
+
+    gap: 18px;
+    padding: 18px 20px;
+
+    border: 1px solid #EADBD2;
+    border-radius: 10px;
+
+    background-color: #FFFFFF;
+}
+
+.diferencial-item > span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #F3D6DA;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.diferencial-item h3 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.diferencial-item p {
+    margin: 0;
+
+    font-size: 0.87rem;
+    line-height: 1.5;
+}
+
+/* =========================================
+CONTATO
+========================================= */
+
+.contato-sobre {
+    padding: 85px 5%;
+}
+
+.contato-sobre .titulo-secao {
+    max-width: 750px;
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.contato-sobre .titulo-secao h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.contato-sobre .titulo-secao p:not(.subtitulo) {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contato-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.contato-card {
+    padding: 28px 20px;
+
+    text-align: center;
+
+    border: 1px solid #EADBD2;
+    border-radius: 10px;
+
+    background-color: #FFFFFF;
+}
+
+.contato-card > span {
+    display: block;
+
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.contato-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.contato-card p {
+    margin: 0;
+
+    font-size: 0.87rem;
+    line-height: 1.55;
+}
+
+/* =========================================
+CHAMADA FINAL
+========================================= */
+
+.chamada-sobre {
+    padding: 80px 5%;
+
+    text-align: center;
+
+    background-color: #FFFAF7;
+}
+
+.chamada-sobre > div {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.chamada-sobre .subtitulo {
+    font-size: 0.8rem;
+    letter-spacing: 1.8px;
+    margin-bottom: 14px;
+}
+
+.chamada-sobre h2 {
+    max-width: 650px;
+    margin: 0 auto 16px;
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+}
+
+.chamada-sobre p:not(.subtitulo) {
+    max-width: 600px;
+    margin: 0 auto 25px;
+
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+/* =========================================
+RESPONSIVIDADE — SOBRE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .historia-sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .historia-texto {
+        text-align: center;
+    }
+
+    .historia-texto h2,
+    .historia-texto p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .historia-destaque {
+        max-width: 500px;
+        width: 100%;
+
+        margin: 0 auto;
+
+        box-sizing: border-box;
+    }
+
+    .essencia-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .diferencial-conteudo {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .diferencial-texto {
+        text-align: center;
+    }
+
+    .diferencial-texto p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contato-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero-sobre {
+        min-height: 380px;
+        padding: 60px 6%;
+    }
+
+    .hero-sobre h1 {
+        font-size: 2.15rem;
+    }
+        .hero-sobre p:not(.destaque) {
+        font-size: 0.95rem;
+    }
+
+    .historia-sobre,
+    .essencia-sobre,
+    .diferencial-sobre,
+    .contato-sobre {
+        padding: 60px 6%;
+    }
+
+    .historia-destaque {
+        min-height: 260px;
+        padding: 30px 20px;
+    }
+
+    .historia-destaque strong {
+        font-size: 1.45rem;
+    }
+
+    .essencia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .diferencial-item {
+        grid-template-columns: 40px 1fr;
+        gap: 14px;
+        padding: 16px;
+    }
+
+    .diferencial-item > span {
+        width: 35px;
+        height: 35px;
+    }
+
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chamada-sobre {
+        padding: 60px 6%;
+    }
+}
+
+/* =========================================
+PAGAMENTO EM DINHEIRO
+========================================= */
+
+.pagamento-dinheiro {
+    margin-top: 15px;
+    padding: 18px;
+
+    background-color: #FFF9F4;
+
+    border: 1px solid #E8D5B5;
+    border-radius: 12px;
+}
+
+.pagamento-dinheiro[hidden] {
+    display: none;
+}
+
+.pagamento-dinheiro:not([hidden]) {
+    display: block;
+}
+
+.pagamento-dinheiro .campo {
+    margin-bottom: 15px;
+}
+
+.pagamento-dinheiro .campo input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #E8D5B5;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    background-color: #FFFFFF;
+    color: #4A3530;
+}
+
+.opcao-troco {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 10px 0;
+
+    cursor: pointer;
+}
+
+.opcao-troco input {
+    width: auto;
+}
+
+.resultado-troco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 15px;
+    padding-top: 15px;
+
+    border-top: 1px solid #E8D5B5;
+}
+
+.resultado-troco strong {
+    color: #B28A45;
+    font-size: 1.1rem;
+}
+
+.mensagem-valor {
+    margin-top: 8px;
+    font-size: 0.85rem;
+}
+
+/* =========================================
+MODAL DE FINALIZAÇÃO
+========================================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: rgba(74, 53, 48, 0.55);
+
+    z-index: 9999;
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal-conteudo {
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 35px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 50px rgba(74, 53, 48, 0.2);
+}
+
+.fechar-modal {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #FFF9F4;
+    color: #4A3530;
+
+    font-size: 1.5rem;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.fechar-modal:hover {
+    background-color: #F3D6DA;
+}
+
+.modal-conteudo .subtitulo {
+    margin-bottom: 10px;
+}
+
+.modal-conteudo h2 {
+    margin-bottom: 10px;
+}
+
+.modal-descricao {
+    margin-bottom: 25px;
+}
+
+.modal-conteudo form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.modal-conteudo .botao {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    .modal {
+        padding: 15px;
+    }
+
+    .modal-conteudo {
+        padding: 30px 20px;
+    }
+}
+
+/* =========================================
+AJUSTE — CAIXA DE RESUMO DO PEDIDO
+========================================= */
+
+.resumo-pedido .campo {
+    gap: 5px;
+}
+
+.resumo-pedido .campo input {
+    padding: 10px 12px;
+    min-height: 42px;
+}
+
+.resumo-pedido .forma-pagamento {
+    padding: 15px;
+    gap: 8px;
+}
+
+.resumo-pedido form {
+    gap: 15px;
+}
+
+/* =========================================
+AJUSTE FINAL — RESUMO DO PEDIDO
+========================================= */
+
+.resumo-pedido {
+    position: static;
+
+    padding: 20px;
+    max-height: none;
+
+    background-color: #FFFFFF;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(74, 53, 48, 0.08);
+
+    box-sizing: border-box;
+
+    overflow: visible;
+
+    font-size: 1rem;
+}
+
+/* =========================================
+DADOS DO CLIENTE NO RESUMO
+========================================= */
+
+.resumo-pedido .dados-cliente {
+    padding: 0;
+    margin: 15px 0;
+
+    background-color: transparent;
+}
+
+.resumo-pedido .dados-cliente h3 {
+    margin-bottom: 5px;
+}
+
+.resumo-pedido .dados-cliente > p:not(.mensagem-fidelidade) {
+    margin-bottom: 15px;
+
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.resumo-pedido .dados-cliente .campo {
+    margin-bottom: 12px;
+    gap: 5px;
+}
+
+.resumo-pedido .dados-cliente .campo label {
+    font-size: 0.85rem;
+}
+
+.resumo-pedido .dados-cliente .campo input {
+    min-height: 40px;
+
+    padding: 9px 11px;
+
+    font-size: 0.9rem;
+}
+
+/* =========================================
+RESUMO DOS VALORES
+========================================= */
+
+.resumo-pedido .resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 7px 0;
+
+    font-size: 0.9rem;
+}
+
+.resumo-pedido .resumo-total {
+    margin-top: 5px;
+    padding-top: 10px;
+
+    border-top: 1px solid #E8D5B5;
+
+    font-size: 1rem;
+}
+
+.resumo-pedido .resumo-total strong {
+    color: #B28A45;
+    font-size: 1.2rem;
+}
+
+/* =========================================
+FORMA DE PAGAMENTO NO RESUMO
+========================================= */
+
+.resumo-pedido .pagamento-resumo {
+    margin-top: 15px;
+    padding: 15px;
+
+    background-color: #FFF9F4;
+
+    border: 1px solid #E8D5B5;
+    border-radius: 12px;
+}
+
+.resumo-pedido .pagamento-resumo h3 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.resumo-pedido .opcao-pagamento {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 7px;
+
+    font-size: 0.9rem;
+
+    cursor: pointer;
+}
+
+/* =========================================
+PAGAMENTO EM DINHEIRO NO RESUMO
+========================================= */
+
+.resumo-pedido .pagamento-dinheiro {
+    margin-top: 10px;
+    padding: 12px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E8D5B5;
+    border-radius: 10px;
+}
+
+.resumo-pedido .pagamento-dinheiro .campo {
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.resumo-pedido .pagamento-dinheiro .campo input {
+    padding: 9px 10px;
+    font-size: 0.9rem;
+}
+
+.resumo-pedido .opcao-troco {
+    margin: 8px 0;
+    font-size: 0.85rem;
+}
+
+.resumo-pedido .resultado-troco {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+/* =========================================
+FIDELIDADE NO RESUMO
+========================================= */
+
+.resumo-pedido .texto-fidelidade {
+    padding: 10px;
+    margin: 12px 0;
+
+    border-radius: 9px;
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+/* =========================================
+OBSERVAÇÕES
+========================================= */
+
+.resumo-pedido > .campo {
+    margin-top: 12px;
+    gap: 5px;
+}
+
+.resumo-pedido > .campo label {
+    font-size: 0.85rem;
+}
+
+.resumo-pedido > .campo textarea {
+    min-height: 75px;
+
+    padding: 9px 11px;
+
+    font-size: 0.9rem;
+}
+
+/* =========================================
+BOTÃO FINALIZAR
+========================================= */
+
+.resumo-pedido .botao-finalizar {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 11px 15px;
+}
+
+/* =========================================
+RESPONSIVIDADE — RESUMO DO PEDIDO
+========================================= */
+
+@media (max-width: 900px) {
+
+    .resumo-pedido {
+        position: static;
+        order: -1;
+
+        max-height: none;
+        overflow: visible;
+
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .resumo-pedido {
+        padding: 18px;
+    }
+}
+
+/* =========================================
+MODAL DE CONFIRMAÇÃO DO PEDIDO
+========================================= */
+
+.modal-confirmacao {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-confirmacao[hidden] {
+    display: none;
+}
+
+/* =========================================
+CONTEÚDO DA MODAL DE CONFIRMAÇÃO
+========================================= */
+
+.modal-confirmacao-conteudo {
+    width: 100%;
+    max-width: 620px;
+
+    max-height: none !important;
+    overflow: visible !important;
+
+    background: #FFFFFF;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================
+CABEÇALHO DA CONFIRMAÇÃO
+========================================= */
+
+.confirmacao-cabecalho {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+.confirmacao-icone {
+    width: 54px;
+    height: 54px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #E8F7EE;
+    color: #218838;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.confirmacao-cabecalho .subtitulo {
+    margin-bottom: 4px;
+}
+
+.confirmacao-cabecalho h2 {
+    margin: 0 0 6px;
+}
+
+.confirmacao-cabecalho p:last-child {
+    margin: 0;
+}
+/* =========================================
+SEÇÕES DA CONFIRMAÇÃO
+========================================= */
+
+.confirmacao-cliente,
+.confirmacao-itens,
+.confirmacao-pagamento {
+    padding: 20px 0;
+    border-top: 1px solid #EEEEEE;
+}
+
+.confirmacao-cliente h3,
+.confirmacao-itens h3,
+.confirmacao-pagamento h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.confirmacao-cliente p,
+.confirmacao-pagamento p {
+    margin: 7px 0;
+}
+
+/* =========================================
+ITENS DA CONFIRMAÇÃO
+========================================= */
+
+#lista-confirmacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-confirmacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background: #F8F8F8;
+}
+
+.item-confirmacao-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.item-confirmacao-nome {
+    font-weight: 600;
+}
+
+.item-confirmacao-quantidade {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.item-confirmacao-preco {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* =========================================
+VALORES DA CONFIRMAÇÃO
+========================================= */
+
+.confirmacao-valores {
+    padding: 20px 0;
+
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.confirmacao-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 10px;
+}
+
+.confirmacao-linha:last-child {
+    margin-bottom: 0;
+}
+
+.confirmacao-total {
+    margin-top: 15px;
+    padding-top: 15px;
+
+    border-top: 1px solid #EEEEEE;
+
+    font-size: 20px;
+}
+
+/* =========================================
+MENSAGEM DE DESCONTO
+========================================= */
+
+#confirmacao-desconto {
+    font-weight: 600;
+}
+
+/* =========================================
+MENSAGEM FINAL
+========================================= */
+
+.confirmacao-mensagem {
+    margin-top: 22px;
+    padding: 16px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background: #FAF7F2;
+}
+
+.confirmacao-mensagem p {
+    margin: 4px 0;
+}
+
+/* =========================================
+BOTÕES DA CONFIRMAÇÃO
+========================================= */
+
+.confirmacao-acoes {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 24px;
+}
+
+.confirmacao-acoes .botao {
+    flex: 1;
+}
+
+/* =========================================
+RESPONSIVIDADE — CONFIRMAÇÃO
+========================================= */
+
+@media (max-width: 600px) {
+
+    .modal-confirmacao {
+        padding: 12px;
+    }
+
+    .modal-confirmacao-conteudo {
+        padding: 22px;
+        border-radius: 14px;
+    }
+
+    .confirmacao-cabecalho {
+        align-items: flex-start;
+    }
+
+    .confirmacao-icone {
+        width: 46px;
+        height: 46px;
+
+        font-size: 23px;
+    }
+
+    .confirmacao-total {
+        font-size: 18px;
+    }
+
+    .confirmacao-acoes {
+        flex-direction: column;
+    }
+
+    .item-confirmacao {
+        align-items: flex-start;
+    }
+}
+
+/* =========================================
+MODAL DE RESUMO DO PEDIDO
+========================================= */
+
+.modal-resumo {
+    position: fixed;
+    inset: 0;
+
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(74, 53, 48, 0.55);
+}
+
+.modal-resumo[hidden] {
+    display: none;
+}
+
+/* Caixa do resumo */
+
+.modal-resumo-conteudo {
+    position: relative;
+
+    width: 100%;
+    max-width: 620px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+
+    box-sizing: border-box;
+
+    overflow: visible;
+}
+
+/* Botão X */
+
+.fechar-resumo {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #FFF9F4;
+    color: #4A3530;
+
+    font-size: 1.5rem;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.fechar-resumo:hover {
+    background-color: #F3D6DA;
+}
+
+/* Cabeçalho */
+
+.cabecalho-resumo {
+    margin-bottom: 25px;
+    padding-right: 40px;
+}
+
+.cabecalho-resumo h2 {
+    margin-bottom: 8px;
+}
+
+/* Itens */
+
+.itens-resumo {
+    padding: 20px 0;
+    border-top: 1px solid #EEEEEE;
+}
+
+.itens-resumo h3 {
+    margin-bottom: 15px;
+}
+
+#lista-resumo-produtos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.item-resumo-produto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background-color: #F8F8F8;
+}
+
+.item-resumo-produto > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.item-resumo-produto span {
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+
+/* Valores */
+
+.valores-resumo {
+    padding: 20px 0;
+
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.linha-resumo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 10px;
+}
+
+.linha-resumo:last-child {
+    margin-bottom: 0;
+}
+
+.total-resumo {
+    margin-top: 15px;
+    padding-top: 15px;
+
+    border-top: 1px solid #EEEEEE;
+
+    font-size: 1.15rem;
+}
+
+.total-resumo strong:last-child {
+    color: #B28A45;
+    font-size: 1.25rem;
+}
+
+/* Dados do cliente */
+
+.dados-resumo {
+    padding: 20px 0;
+}
+
+.dados-resumo h3 {
+    margin-bottom: 12px;
+}
+
+.dados-resumo p {
+    margin: 7px 0;
+}
+
+/* Ações */
+
+.acoes-resumo {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.acoes-resumo .botao {
+    flex: 1;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    .modal-resumo {
+        padding: 12px;
+    }
+
+    .modal-resumo-conteudo {
+        padding: 22px;
+        border-radius: 14px;
+    }
+
+    .acoes-resumo {
+        flex-direction: column;
+    }
+}
+
+/* =========================================
+AJUSTE VISUAL — PÁGINA PEDIDOS
+========================================= */
+
+.cabecalho-pedidos h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.cabecalho-pedidos-conteudo > p:not(.subtitulo) {
+    font-size: 1.1rem;
+}
+
+.titulo-pedido h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.produto-pedido h3 {
+    color: #4A3530;
+
+    margin-bottom: 5px;
+
+    font-size: 1.15rem;
+}
+
+.produto-pedido p {
+    color: #6B5752;
+
+    font-size: 1rem;
+
+    margin-bottom: 8px;
+}
+
+.produto-pedido strong {
+    color: #B28A45;
+
+    font-size: 1.2rem;
+}
+
+.quantidade-pedido label {
+    font-size: 0.9rem;
+    color: #6B5752;
+}
+
+.resumo-pedido .dados-cliente .campo label,
+.resumo-pedido > .campo label {
+    font-size: 1rem;
+}
+
+.resumo-pedido .dados-cliente .campo input,
+.resumo-pedido > .campo textarea,
+.resumo-pedido .pagamento-dinheiro .campo input {
+    font-size: 1rem;
+}
+
+.resumo-pedido .resumo-linha,
+.resumo-pedido .opcao-pagamento {
+    font-size: 1rem;
+}
+/* =========================================
+MODAL — ENCOMENDA REALIZADA
+========================================= */
+
+.modal-encomenda {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: rgba(74, 53, 48, 0.55);
+
+    z-index: 9999;
+}
+
+.modal-encomenda[hidden] {
+    display: none;
+}
+
+.modal-encomenda-conteudo {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 40px 35px;
+
+    text-align: center;
+
+    background-color: #FFFFFF;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 50px rgba(74, 53, 48, 0.2);
+}
+
+.modal-encomenda-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background-color: #F3D6DA;
+    color: #4A3530;
+
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.modal-encomenda-conteudo .subtitulo {
+    margin-bottom: 10px;
+}
+
+.modal-encomenda-conteudo h2 {
+    margin-bottom: 15px;
+}
+
+.modal-encomenda-conteudo > p:not(.subtitulo) {
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.modal-encomenda-conteudo .botao {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    .modal-encomenda {
+        padding: 15px;
+    }
+
+    .modal-encomenda-conteudo {
+        padding: 35px 22px;
+    }
+}
